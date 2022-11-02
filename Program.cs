@@ -96,6 +96,14 @@
                     Console.Write($"{returnArray[i]} ");
                 }
             }
+
+            static double HighlightingHundredths(double variable1)
+            {
+                variable1 = Math.Round(variable1, 2);
+                variable1 = (variable1 * 100) % 100;
+                variable1 = Math.Abs(variable1);
+                return variable1;
+            }
         }
         public static void Main()
         {

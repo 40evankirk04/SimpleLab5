@@ -100,9 +100,24 @@
             static double HighlightingHundredths(double variable1)
             {
                 variable1 = Math.Round(variable1, 2);
+
                 variable1 = (variable1 * 100) % 100;
+
                 variable1 = Math.Abs(variable1);
+
                 return variable1;
+            }
+
+            static int Factorial(double variable1)
+            {
+                int factorial = 1;
+
+                for (int j = 1; j <= variable1; j++)
+                {
+                    factorial *= j;
+                }
+
+                return factorial;
             }
         }
         public static void Main()
@@ -110,6 +125,8 @@
             Task1Solving();
 
             Task2Solving();
+
+            Task4Solving();
         }
     }
 }

@@ -64,6 +64,24 @@
 
             Console.WriteLine(isVariableCorrect ? result : "Число не корректно");
         }
+
+        static void Task3Solving()
+        {
+            double[] inputArray = { 8, -5, -12.067, 45.11934 };
+            double[] returnArray = new double[inputArray.Length];
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                double number = inputArray[i];
+
+                if ((inputArray[i] > 0) && (inputArray[i]) == (int)inputArray[i])
+                    number = Factorial(inputArray[i]);
+                else if ((inputArray[i]) != (int)inputArray[i])
+                    number = HighlightingHundredths(inputArray[i]);
+
+                returnArray[i] = number;
+            }
+            ReturnOfArrays(inputArray, returnArray);
+        }
         public static void Main()
         {
             Task1Solving();

@@ -27,6 +27,24 @@
             }
         }
 
+        static void Task2Solving()
+        {
+            string variable = Console.ReadLine();
+
+            int result = 0;
+
+            bool isVariableCorrect = true;
+
+            int j = 0;
+
+            if ((variable[0] == '-'))
+
+                j = 1;
+
+            else
+
+                j = 0;
+        }
         public static void Main()
         {
             Task1Solving();

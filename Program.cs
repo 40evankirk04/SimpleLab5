@@ -29,7 +29,7 @@
 
         static void Task2Solving()
         {
-            string variable = Console.ReadLine();
+            string a = Console.ReadLine();
 
             int result = 0;
 
@@ -37,17 +37,38 @@
 
             int j = 0;
 
-            if ((variable[0] == '-'))
+            if ((a[0] == '-'))
 
                 j = 1;
 
             else
 
                 j = 0;
+
+            for (int i = j; i < a.Length; i++)
+            {
+                int indicatorCharIndex = a[i] - '0';
+
+                if ((indicatorCharIndex >= 0) && (indicatorCharIndex < 10))
+                {
+                    result += indicatorCharIndex;
+                }
+
+                else
+                {
+                    isVariableCorrect = false;
+
+                    break;
+                }
+            }
+
+            Console.WriteLine(isVariableCorrect ? result : "Число не корректно");
         }
         public static void Main()
         {
             Task1Solving();
+
+            Task2Solving();
         }
     }
 }
